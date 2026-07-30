@@ -244,6 +244,7 @@
     border-radius:4px;
     overflow:hidden;
     position:relative;
+    cursor:pointer;
   }
   .g-tile img{
     width:100%; height:100%;
@@ -279,6 +280,71 @@
     line-height:1.6;
   }
 
+  /* ---------- LIGHTBOX MODAL ---------- */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox.active {
+    display: flex;
+  }
+  .lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1010;
+    padding: 10px;
+  }
+  .lightbox-counter {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+  .lightbox-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 16px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .lightbox-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .lightbox-prev { left: 15px; }
+  .lightbox-next { right: 15px; }
+
   /* ---------- LOCATION ---------- */
   .loc-title{
     text-align:center;
@@ -297,7 +363,7 @@
   }
   .map-box{
     width:100%;
-    height:280px; /* 지도 영역 높이 확보 */
+    height:280px;
     border:1px solid var(--line);
     border-radius:8px;
     overflow:hidden;
@@ -731,6 +797,7 @@
       <div class="g-tile"><img src="photo8.png" alt="사진8" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo8.jpg</span></div></div>
       <div class="g-tile"><img src="photo9.png" alt="사진9" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo9.jpg</span></div></div>
     </div>
+    <div class="gallery-hint">사진을 누르면 크게 볼 수 있습니다.</div>
   </section>
 
   <!-- LOCATION -->
@@ -846,6 +913,17 @@
   <div class="footer">오만석님의 칠순을 축하드립니다</div>
 </div>
 
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close">&times;</button>
+  <div class="lightbox-counter" id="lightbox-counter">1 / 9</div>
+  <div class="lightbox-content">
+    <button class="lightbox-btn lightbox-prev" id="lightbox-prev">&#10094;</button>
+    <img id="lightbox-img" src="" alt="확대 이미지">
+    <button class="lightbox-btn lightbox-next" id="lightbox-next">&#10095;</button>
+  </div>
+</div>
+
 <script>
 // ---------- Countdown ----------
 const target = new Date("2026-09-05T12:00:00+09:00");
@@ -888,6 +966,56 @@ for(let d=1; d<=daysInMonth; d++){
   el.textContent = d;
   calGrid.appendChild(el);
 }
+
+// ---------- GALLERY & LIGHTBOX ----------
+const galleryTiles = document.querySelectorAll('.g-tile');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+const lightboxCounter = document.getElementById('lightbox-counter');
+
+let currentImageIndex = 0;
+const imageUrls = Array.from(galleryTiles).map(tile => {
+  const img = tile.querySelector('img');
+  return img ? img.src : '';
+});
+
+galleryTiles.forEach((tile, index) => {
+  tile.addEventListener('click', () => {
+    // 이미지가 깨졌거나 로드 실패한 경우 제외할 수도 있지만 전체 인덱스 맞춤
+    currentImageIndex = index;
+    openLightbox(currentImageIndex);
+  });
+});
+
+function openLightbox(index) {
+  lightboxImg.src = imageUrls[index];
+  lightboxCounter.textContent = (index + 1) + ' / ' + imageUrls.length;
+  lightbox.classList.add('active');
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+lightboxPrev.addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
+  openLightbox(currentImageIndex);
+});
+
+lightboxNext.addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+  openLightbox(currentImageIndex);
+});
 
 // ---------- RSVP ----------
 let rsvpChoice = null;
