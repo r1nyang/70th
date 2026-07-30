@@ -10,6 +10,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Pretendard-Regular&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
+
+  @font-face {
+    font-family: 'bold';
+    src: url('./bold.ttf') format('truetype');
+    font-family: 'light';
+    src: url('./light.ttf') format('truetype');
+
+}
   :root{
     --bg-cream:#f7f5ef;
     --bg-sage:#e9ede3;
@@ -24,7 +32,7 @@
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   body{
-    font-family:'Pretendard-Regular','Noto Serif KR',sans-serif;
+    font-family:'light','Noto Serif KR',sans-serif;
     background:#d9d9d0;
     color:var(--text-main);
     display:flex;
@@ -79,7 +87,7 @@
     margin:40px 0;
   }
   .cover-name{
-    font-family:'Nanum Myeongjo', serif;
+    font-family:'bold', serif;
     font-weight:800;
     font-size:64px;
     line-height:1.15;
@@ -209,7 +217,7 @@
 
   /* ---------- GALLERY ---------- */
   .gallery-wrap{
-    padding-top:0;
+    padding-top:30px;
   }
   .gallery-title{
     text-align:center;
@@ -259,6 +267,7 @@
     letter-spacing:0.2px;
   }
   .gallery-hint{
+    
     text-align:center;
     font-size:11px;
     color:var(--text-sub);
@@ -662,7 +671,7 @@
       <div class="cover-name">오만석</div>
       <div class="cover-sub-vert">고 희 를 맞 이 하 여</div>
     </div>
-    <div class="cover-caption">칠 순 연 에 모 십 니 다</div>
+    <div class="cover-caption">고희연에 모십니다</div>
     <div style="flex:1"></div>
     <div class="cover-footer">
       <div class="cover-date">2026 . 09 . 05</div>
@@ -709,14 +718,13 @@
       <div class="g-tile"><img src="image.png" alt="사진1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo1.jpg</span></div></div>
       <div class="g-tile"><img src="photo2.jpg" alt="사진2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo2.jpg</span></div></div>
       <div class="g-tile"><img src="photo3.jpg" alt="사진3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo3.jpg</span></div></div>
-      <div class="g-tile"><img src="photo4.jpg" alt="사진4" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo4.jpg</span></div></div>
-      <div class="g-tile"><img src="photo5.jpg" alt="사진5" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo5.jpg</span></div></div>
-      <div class="g-tile"><img src="photo6.jpg" alt="사진6" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo6.jpg</span></div></div>
-      <div class="g-tile"><img src="photo7.jpg" alt="사진7" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo7.jpg</span></div></div>
-      <div class="g-tile"><img src="photo8.jpg" alt="사진8" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo8.jpg</span></div></div>
-      <div class="g-tile"><img src="photo9.jpg" alt="사진9" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo9.jpg</span></div></div>
+      <div class="g-tile"><img src="photo4.png" alt="사진4" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo4.jpg</span></div></div>
+      <div class="g-tile"><img src="photo5.png" alt="사진5" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo5.jpg</span></div></div>
+      <div class="g-tile"><img src="photo6.png" alt="사진6" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo6.jpg</span></div></div>
+      <div class="g-tile"><img src="photo7.png" alt="사진7" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo7.jpg</span></div></div>
+      <div class="g-tile"><img src="photo8.png" alt="사진8" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo8.jpg</span></div></div>
+      <div class="g-tile"><img src="photo9.png" alt="사진9" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo9.jpg</span></div></div>
     </div>
-    <div class="gallery-hint">photo1.jpg ~ photo9.jpg 파일을 HTML과 같은 폴더에 넣으면<br>자동으로 채워집니다</div>
   </section>
 
   <!-- LOCATION -->
