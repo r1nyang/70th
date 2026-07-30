@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="오만석님의 칠순연에 초대합니다">
+<meta property="og:description" content="2026년 9월 5일 토요일 낮 12시, 춘천세종호텔">
+<meta property="og:image" content="https://여러분의웹사이트주소/mainimage.png">
+<title>오만석 칠순 초대장</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Pretendard-Regular&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-cream:#f7f5ef;
+    --bg-sage:#e9ede3;
+    --bg-sage-2:#eef1e8;
+    --green-deep:#4f5c42;
+    --green-mid:#7c8a6c;
+    --green-soft:#a9b59a;
+    --text-main:#43473e;
+    --text-sub:#9a9a90;
+    --line:#dcd9cc;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Pretendard-Regular','Noto Serif KR',sans-serif;
+    background:#d9d9d0;
+    color:var(--text-main);
+    display:flex;
+    justify-content:center;
+  }
+  .frame{
+    width:100%;
+    max-width:460px;
+    background:var(--bg-cream);
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+  }
+  .section{
+    padding:64px 30px;
+    position:relative;
+  }
+  .section.sage{ background:var(--bg-sage); }
+  .section.sage2{ background:var(--bg-sage-2); }
+  .eyebrow{
+    text-align:center;
+    letter-spacing:6px;
+    font-size:12px;
+    color:var(--green-mid);
+    font-weight:600;
+    margin-bottom:22px;
+  }
+  .divider{
+    width:36px;
+    height:1px;
+    background:var(--line);
+    margin:0 auto 30px;
+  }
+
+  /* ---------- COVER ---------- */
+  .cover{
+    padding:70px 26px 50px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height:100vh;
+    border:1px solid var(--line);
+    margin:10px;
+    border-radius:2px;
+  }
+  .cover-mid{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:26px;
+    margin:40px 0;
+  }
+  .cover-name{
+    font-family:'Nanum Myeongjo', serif;
+    font-weight:800;
+    font-size:64px;
+    line-height:1.15;
+    color:var(--green-deep);
+    writing-mode:vertical-rl;
+    letter-spacing:4px;
+  }
+  .cover-sub-vert{
+    writing-mode:vertical-rl;
+    font-size:14px;
+    letter-spacing:6px;
+    color:var(--text-sub);
+    line-height:1.9;
+  }
+  .cover-caption{
+    text-align:center;
+    font-size:17px;
+    letter-spacing:8px;
+    color:var(--text-main);
+    margin-top:6px;
+  }
+  .cover-footer{
+    text-align:center;
+  }
+  .cover-date{
+    letter-spacing:3px;
+    font-size:15px;
+    color:var(--green-deep);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .cover-time{
+    font-size:13px;
+    color:var(--text-sub);
+    margin-bottom:4px;
+  }
+  .cover-family{
+    font-size:13px;
+    color:var(--text-sub);
+  }
+
+  /* ---------- THE DAY ---------- */
+  .day-title{
+    text-align:center;
+    font-family:'Nanum Myeongjo', serif;
+    font-weight:800;
+    font-size:25px;
+    color:var(--text-main);
+    margin-bottom:10px;
+  }
+  .day-sub{
+    text-align:center;
+    font-size:13px;
+    color:var(--text-sub);
+    margin-bottom:34px;
+  }
+  .countdown{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    margin-bottom:40px;
+  }
+  .cd-item{ text-align:center; }
+  .cd-num{
+    font-size:26px;
+    font-weight:700;
+    color:var(--green-deep);
+    font-variant-numeric: tabular-nums;
+  }
+  .cd-label{
+    font-size:10px;
+    letter-spacing:1px;
+    color:var(--text-sub);
+    margin-top:4px;
+  }
+  .cal-title{
+    text-align:center;
+    font-size:12px;
+    letter-spacing:4px;
+    color:var(--green-mid);
+    font-weight:600;
+    margin-bottom:18px;
+  }
+  .cal-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    row-gap:14px;
+    text-align:center;
+  }
+  .cal-grid .dow{
+    font-size:11px;
+    color:var(--text-sub);
+    font-weight:600;
+  }
+  .cal-grid .dow.sun{ color:#c98d8d; }
+  .cal-grid .day{
+    font-size:13px;
+    color:var(--text-main);
+  }
+  .cal-grid .day.empty{ visibility:hidden; }
+  .cal-grid .day.mark{
+    width:26px; height:26px;
+    line-height:26px;
+    border:1px solid var(--green-deep);
+    border-radius:50%;
+    margin:0 auto;
+    color:var(--green-deep);
+    font-weight:700;
+  }
+  .day-caption{
+    text-align:center;
+    font-size:12px;
+    color:var(--green-mid);
+    letter-spacing:1px;
+    margin-top:34px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+
+  /* ---------- INVITATION ---------- */
+  .invite-msg{
+    text-align:center;
+    font-size:14.5px;
+    line-height:2.05;
+    color:var(--text-main);
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-wrap{
+    padding-top:0;
+  }
+  .gallery-title{
+    text-align:center;
+    font-size:12px;
+    letter-spacing:5px;
+    color:var(--green-mid);
+    font-weight:600;
+    margin-bottom:22px;
+  }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
+  }
+  .g-tile{
+    aspect-ratio:1/1;
+    background:var(--white);
+    border:1px dashed var(--line);
+    border-radius:4px;
+    overflow:hidden;
+    position:relative;
+  }
+  .g-tile img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .g-fallback{
+    display:none;
+    position:absolute;
+    inset:0;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:4px;
+    background:var(--white);
+  }
+  .g-fallback .plus{
+    font-size:20px;
+    color:var(--green-soft);
+    font-weight:300;
+    line-height:1;
+  }
+  .g-fallback .fname{
+    font-size:9.5px;
+    color:var(--text-sub);
+    letter-spacing:0.2px;
+  }
+  .gallery-hint{
+    text-align:center;
+    font-size:11px;
+    color:var(--text-sub);
+    margin-top:16px;
+    line-height:1.6;
+  }
+
+  /* ---------- LOCATION ---------- */
+  .loc-title{
+    text-align:center;
+    font-family:'Nanum Myeongjo', serif;
+    font-weight:700;
+    font-size:20px;
+    color:var(--text-main);
+    margin-bottom:6px;
+  }
+  .loc-sub{
+    text-align:center;
+    font-size:12.5px;
+    color:var(--text-sub);
+    line-height:1.7;
+    margin-bottom:26px;
+  }
+  .map-box{
+    width:100%;
+    height:220px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+    margin-bottom:18px;
+    background:var(--bg-sage-2);
+  }
+  .map-box iframe{
+    width:100%;
+    height:100%;
+    border:0;
+    display:block;
+  }
+  .map-links{
+    display:flex;
+    gap:8px;
+    margin-bottom:44px;
+  }
+  .map-links a{
+    flex:1;
+    text-align:center;
+    padding:13px 0;
+    border:1px solid var(--line);
+    border-radius:26px;
+    font-size:12.5px;
+    color:var(--text-main);
+    text-decoration:none;
+    background:var(--white);
+  }
+
+  .rsvp-title{
+    text-align:center;
+    font-family:'Nanum Myeongjo', serif;
+    font-weight:700;
+    font-size:19px;
+    margin-bottom:12px;
+  }
+  .rsvp-desc{
+    text-align:center;
+    font-size:12.5px;
+    color:var(--text-sub);
+    line-height:1.8;
+    margin-bottom:22px;
+  }
+  .rsvp-choices{
+    display:flex;
+    gap:8px;
+    margin-bottom:14px;
+  }
+  .rsvp-choice{
+    flex:1;
+    padding:12px 0;
+    text-align:center;
+    border:1px solid var(--line);
+    border-radius:8px;
+    font-size:13px;
+    color:var(--text-main);
+    background:var(--white);
+    cursor:pointer;
+  }
+  .rsvp-choice.active{
+    background:var(--green-mid);
+    border-color:var(--green-mid);
+    color:#fff;
+  }
+  input[type=text], textarea{
+    width:100%;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:14px 16px;
+    font-size:13px;
+    font-family:inherit;
+    color:var(--text-main);
+    background:var(--white);
+    margin-bottom:10px;
+    resize:none;
+  }
+
+  /* ---------- RSVP COUNTBOX ---------- */
+  .rsvp-count-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:12px 16px;
+    margin-bottom:10px;
+  }
+  .rsvp-count-label{
+    font-size:13px;
+    color:var(--text-main);
+  }
+  .rsvp-count-ctrl{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .rsvp-count-ctrl button{
+    width:28px;
+    height:28px;
+    border:1px solid var(--line);
+    border-radius:50%;
+    background:var(--white);
+    font-size:14px;
+    color:var(--text-main);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .rsvp-count-ctrl button:active{
+    background:var(--bg-sage);
+  }
+  #rsvp-count-num{
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--green-deep);
+    min-width:32px;
+    text-align:center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .btn-main{
+    width:100%;
+    padding:15px 0;
+    border:none;
+    border-radius:26px;
+    background:var(--green-mid);
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    cursor:pointer;
+  }
+  .btn-main:active{ opacity:.85; }
+  .rsvp-thanks{
+    text-align:center;
+    font-size:12.5px;
+    color:var(--green-deep);
+    margin-top:10px;
+    display:none;
+  }
+
+  /* ---------- GUESTBOOK ---------- */
+  .gb-title{
+    text-align:center;
+    font-family:'Nanum Myeongjo', serif;
+    font-weight:700;
+    font-size:19px;
+    margin-bottom:22px;
+  }
+  .gb-list-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:22px;
+    margin-bottom:8px;
+  }
+  .gb-list-title{
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--green-deep);
+  }
+  .gb-refresh-btn{
+    border:none;
+    background:none;
+    color:var(--text-sub);
+    font-size:11.5px;
+    cursor:pointer;
+    padding:4px 6px;
+  }
+  .gb-refresh-btn:active{ color:var(--green-deep); }
+  .gb-list{
+    margin-top:22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .gb-item{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:13px 16px;
+  }
+  .gb-item .name{
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--green-deep);
+    margin-bottom:4px;
+  }
+  .gb-item .msg{
+    font-size:12.5px;
+    color:var(--text-main);
+    line-height:1.6;
+  }
+  .gb-empty{
+    text-align:center;
+    font-size:12px;
+    color:var(--text-sub);
+    margin-top:22px;
+  }
+  .gb-pagination{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-top:18px;
+  }
+  .gb-page-btn{
+    border:1px solid var(--line);
+    background:var(--white);
+    color:var(--text-main);
+    font-size:12px;
+    padding:7px 14px;
+    border-radius:16px;
+    cursor:pointer;
+  }
+  .gb-page-btn:disabled{
+    opacity:.35;
+    cursor:default;
+  }
+  .gb-page-num{
+    font-size:12px;
+    color:var(--text-sub);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- ACCOUNTS ---------- */
+  .acc-title{
+    text-align:center;
+    font-family:'Nanum Myeongjo', serif;
+    font-weight:700;
+    font-size:19px;
+    margin-bottom:24px;
+  }
+  .acc-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 18px;
+    margin-bottom:12px;
+  }
+  .acc-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+  }
+  .acc-owner{
+    font-size:12px;
+    color:var(--text-sub);
+  }
+  .acc-bank{
+    font-size:13px;
+    font-weight:700;
+    color:var(--text-main);
+  }
+  .acc-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .acc-num{
+    font-size:14px;
+    letter-spacing:0.5px;
+    color:var(--text-main);
+    font-variant-numeric: tabular-nums;
+  }
+  .copy-btn{
+    border:none;
+    background:var(--bg-sage);
+    color:var(--green-deep);
+    font-size:11px;
+    padding:7px 12px;
+    border-radius:16px;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+
+  .footer{
+    text-align:center;
+    padding:30px 0 40px;
+    font-size:10.5px;
+    letter-spacing:1px;
+    color:var(--text-sub);
+  }
+
+  input[type=file]{ display:none; }
+
+  /* ---------- MUSIC BUTTON ---------- */
+  .music-btn{
+    position:fixed;
+    top:16px;
+    right:16px;
+    width:38px; height:38px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.85);
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:50;
+    cursor:pointer;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+    color:var(--green-deep);
+  }
+  .music-btn svg{ width:16px; height:16px; }
+  .music-btn.spin svg{
+    animation:spin 3.5s linear infinite;
+  }
+  @keyframes spin{
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+  }
+
+  /* ---------- SCROLL REVEAL ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.in{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* ---------- COVER ANIMATION ---------- */
+  .cover{ animation:coverFade 1.4s ease both; }
+  @keyframes coverFade{
+    from{ opacity:0; }
+    to{ opacity:1; }
+  }
+  .cover-name{ animation:nameFade 1.3s 0.3s ease both; }
+  @keyframes nameFade{
+    from{ opacity:0; transform:translateY(10px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .cover-sub-vert{ animation:nameFade 1.3s 0.6s ease both; }
+  .cover-caption{ animation:nameFade 1.2s 0.9s ease both; }
+  .cover-footer{ animation:nameFade 1.2s 1.1s ease both; }
+
+  .g-tile{ transition:transform 0.35s ease, box-shadow 0.35s ease; }
+  .g-tile:active{ transform:scale(0.96); }
+  .btn-main{ transition:transform 0.15s ease, opacity 0.15s ease; }
+  .btn-main:active{ transform:scale(0.97); }
+  .rsvp-choice{ transition:background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease; }
+  .rsvp-choice:active{ transform:scale(0.96); }
+  .copy-btn{ transition:background 0.2s ease; }
+  .rsvp-thanks.show{ animation:nameFade 0.6s ease both; }
+  .gb-item{ animation:itemFade 0.5s ease both; }
+  @keyframes itemFade{
+    from{ opacity:0; transform:translateY(8px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <audio id="bgm" src="bgm.mp3" loop preload="none"></audio>
+  <div class="music-btn" id="music-btn" title="배경음악">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.6"/>
+    </svg>
+  </div>
+
+  <!-- COVER -->
+  <section class="section cover">
+    <div>
+      <div class="eyebrow">THE 70TH BIRTHDAY</div>
+      <div class="divider"></div>
+    </div>
+    <div class="cover-mid">
+      <div class="cover-name">오만석</div>
+      <div class="cover-sub-vert">고 희 를 맞 이 하 여</div>
+    </div>
+    <div class="cover-caption">칠 순 연 에 모 십 니 다</div>
+    <div style="flex:1"></div>
+    <div class="cover-footer">
+      <div class="cover-date">2026 . 09 . 05</div>
+      <div class="cover-time">토요일 · 낮 12시</div>
+      <div class="cover-family">자녀 일동 올림</div>
+    </div>
+  </section>
+
+  <!-- THE DAY -->
+  <section class="section sage reveal">
+    <div class="eyebrow">THE DAY</div>
+    <div class="day-title">2026년 9월 5일 토요일</div>
+    <div class="day-sub">낮 12시 · 춘천세종호텔 다이아몬드실</div>
+
+    <div class="countdown">
+      <div class="cd-item"><div class="cd-num" id="cd-days">00</div><div class="cd-label">DAYS</div></div>
+      <div class="cd-item"><div class="cd-num" id="cd-hours">00</div><div class="cd-label">HOURS</div></div>
+      <div class="cd-item"><div class="cd-num" id="cd-mins">00</div><div class="cd-label">MINS</div></div>
+      <div class="cd-item"><div class="cd-num" id="cd-secs">00</div><div class="cd-label">SECS</div></div>
+    </div>
+
+    <div class="cal-title">SEPTEMBER 2026</div>
+    <div class="cal-grid" id="cal-grid"></div>
+
+    <div class="day-caption" id="day-caption">오만석님 칠순연이 D-00</div>
+  </section>
+
+  <!-- INVITATION -->
+  <section class="section reveal">
+    <div class="eyebrow">INVITATION</div>
+    <div class="invite-msg">
+      아버지께서 살아오신 일흔 해,<br>
+      그 긴 세월의 사랑과 정성에 감사드리며<br>
+      뜻깊은 자리를 마련하였습니다.<br><br>
+      귀한 걸음으로 자리를 빛내 주시면<br>
+      더없는 기쁨이겠습니다.
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section sage2 gallery-wrap reveal">
+    <div class="gallery-title">GALLERY</div>
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="g-tile"><img src="image.png" alt="사진1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo1.jpg</span></div></div>
+      <div class="g-tile"><img src="photo2.jpg" alt="사진2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo2.jpg</span></div></div>
+      <div class="g-tile"><img src="photo3.jpg" alt="사진3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo3.jpg</span></div></div>
+      <div class="g-tile"><img src="photo4.jpg" alt="사진4" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo4.jpg</span></div></div>
+      <div class="g-tile"><img src="photo5.jpg" alt="사진5" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo5.jpg</span></div></div>
+      <div class="g-tile"><img src="photo6.jpg" alt="사진6" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo6.jpg</span></div></div>
+      <div class="g-tile"><img src="photo7.jpg" alt="사진7" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo7.jpg</span></div></div>
+      <div class="g-tile"><img src="photo8.jpg" alt="사진8" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo8.jpg</span></div></div>
+      <div class="g-tile"><img src="photo9.jpg" alt="사진9" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="g-fallback"><span class="plus">+</span><span class="fname">photo9.jpg</span></div></div>
+    </div>
+    <div class="gallery-hint">photo1.jpg ~ photo9.jpg 파일을 HTML과 같은 폴더에 넣으면<br>자동으로 채워집니다</div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section reveal">
+    <div class="eyebrow">LOCATION</div>
+    <div class="loc-title">춘천세종호텔 다이아몬드실</div>
+    <div class="loc-sub">강원특별자치도 춘천시 봉의산길 31</div>
+    <div class="map-box">
+      <iframe src="https://maps.google.com/maps?q=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%8B%9C%20%EB%B4%89%EC%9D%98%EC%82%B0%EA%B8%B8%2031&z=17&output=embed" loading="lazy" allowfullscreen title="춘천세종호텔 위치 지도"></iframe>
+    </div>
+    <div class="map-links">
+      <a href="https://map.naver.com/v5/search/춘천세종호텔" target="_blank" rel="noopener">네이버 지도</a>
+      <a href="https://map.kakao.com/?q=춘천세종호텔" target="_blank" rel="noopener">카카오 맵</a>
+    </div>
+
+    <div class="rsvp-title">참석 여부</div>
+    <div class="rsvp-desc">잔치에 참석해 자리를 빛내주실 분들은<br>참석 의사를 전달해 주세요.</div>
+    <div class="rsvp-choices">
+      <div class="rsvp-choice" id="choice-yes">참석합니다</div>
+      <div class="rsvp-choice" id="choice-no">불참합니다</div>
+    </div>
+    <input type="text" id="rsvp-name" placeholder="성함을 입력해 주세요">
+    
+    <div class="rsvp-count-box" id="rsvp-count-container">
+      <span class="rsvp-count-label">동반인 포함 인원</span>
+      <div class="rsvp-count-ctrl">
+        <button type="button" id="count-minus">-</button>
+        <span id="rsvp-count-num">1명</span>
+        <button type="button" id="count-plus">+</button>
+      </div>
+    </div>
+
+    <button class="btn-main" id="rsvp-submit">참석 여부 전달하기</button>
+    <div class="rsvp-thanks" id="rsvp-thanks">전달되었습니다. 감사합니다 :)</div>
+
+    <iframe name="rsvp-hidden-frame" id="rsvp-hidden-frame" style="display:none;"></iframe>
+    <form id="rsvp-hidden-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSdnbMnscueIJUb99bIesUJ8ueIdeIjVNA0c4Sf-2Nvre1tV-w/formResponse"
+          method="POST" target="rsvp-hidden-frame" style="display:none;">
+      <input type="text" name="entry.1806719387" id="rsvp-hidden-choice">
+      <input type="text" name="entry.1817211246" id="rsvp-hidden-name">
+      <input type="text" name="entry.506600181" id="rsvp-hidden-count">
+    </form>
+  </section>
+
+  <!-- GUESTBOOK -->
+  <section class="section sage2 reveal">
+    <div class="gb-title">방명록</div>
+    <input type="text" id="gb-name" placeholder="예) 홍길동">
+    <textarea id="gb-msg" rows="3" placeholder="예) 늘 건강하시고 만수무강하세요"></textarea>
+    <button class="btn-main" id="gb-submit">남기기</button>
+    <div class="gb-list-head">
+      <span class="gb-list-title">먼저 남겨주신 메시지</span>
+      <button class="gb-refresh-btn" id="gb-refresh">↻ 새로고침</button>
+    </div>
+    <div class="gb-list" id="gb-list"></div>
+    <div class="gb-empty" id="gb-empty">아직 남겨진 메시지가 없습니다</div>
+    <div class="gb-pagination" id="gb-pagination" style="display:none;">
+      <button class="gb-page-btn" id="gb-prev">이전</button>
+      <span class="gb-page-num" id="gb-page-num">1 / 1</span>
+      <button class="gb-page-btn" id="gb-next">다음</button>
+    </div>
+
+    <iframe name="gb-hidden-frame" id="gb-hidden-frame" style="display:none;"></iframe>
+    <form id="gb-hidden-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSd8HQXUt12kivnDAE_RxCcCCfWG5tpgwvsscYVxSXT7bZht_Q/formResponse"
+          method="POST" target="gb-hidden-frame" style="display:none;">
+      <input type="text" name="entry.572140760" id="gb-hidden-name">
+      <input type="text" name="entry.444156228" id="gb-hidden-msg">
+    </form>
+  </section>
+
+  <!-- ACCOUNTS -->
+  <section class="section reveal">
+    <div class="acc-title">마음 전하실 곳</div>
+    <div class="acc-card">
+      <div class="acc-top">
+        <span class="acc-owner">오만석</span>
+        <span class="acc-bank">농협</span>
+      </div>
+      <div class="acc-bottom">
+        <span class="acc-num">169-02-514343</span>
+        <button class="copy-btn" data-num="169-02-514343">복사</button>
+      </div>
+    </div>
+    <div class="acc-card">
+      <div class="acc-top">
+        <span class="acc-owner">이정옥</span>
+        <span class="acc-bank">신한은행</span>
+      </div>
+      <div class="acc-bottom">
+        <span class="acc-num">110426-117122</span>
+        <button class="copy-btn" data-num="110426-117122">복사</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">오만석님의 칠순을 축하드립니다</div>
+</div>
+
+<script>
+// ---------- Countdown ----------
+const target = new Date("2026-09-05T12:00:00+09:00");
+function updateCountdown(){
+  const now = new Date();
+  let diff = target - now;
+  if(diff < 0) diff = 0;
+  const days = Math.floor(diff/(1000*60*60*24));
+  const hours = Math.floor((diff/(1000*60*60))%24);
+  const mins = Math.floor((diff/(1000*60))%60);
+  const secs = Math.floor((diff/1000)%60);
+  document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
+  document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+  document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
+  document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
+  document.getElementById('day-caption').textContent = '오만석님 칠순연이 D-' + days;
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ---------- Calendar (Sept 2026, starts Tuesday) ----------
+const calGrid = document.getElementById('cal-grid');
+const dows = ['S','M','T','W','T','F','S'];
+dows.forEach((d,i)=>{
+  const el = document.createElement('div');
+  el.className = 'dow' + (i===0?' sun':'');
+  el.textContent = d;
+  calGrid.appendChild(el);
+});
+const firstDow = new Date(2026,8,1).getDay();
+const daysInMonth = 30;
+for(let i=0;i<firstDow;i++){
+  const el = document.createElement('div');
+  el.className = 'day empty';
+  calGrid.appendChild(el);
+}
+for(let d=1; d<=daysInMonth; d++){
+  const el = document.createElement('div');
+  el.className = 'day' + (d===5 ? ' mark':'');
+  el.textContent = d;
+  calGrid.appendChild(el);
+}
+
+// ---------- RSVP ----------
+let rsvpChoice = null;
+let rsvpCount = 1;
+
+document.getElementById('choice-yes').onclick = function(){
+  rsvpChoice = '참석합니다';
+  this.classList.add('active');
+  document.getElementById('choice-no').classList.remove('active');
+  document.getElementById('rsvp-count-container').style.display = 'flex';
+};
+document.getElementById('choice-no').onclick = function(){
+  rsvpChoice = '불참합니다';
+  this.classList.add('active');
+  document.getElementById('choice-yes').classList.remove('active');
+  document.getElementById('rsvp-count-container').style.display = 'none';
+};
+
+document.getElementById('count-minus').onclick = function(){
+  if(rsvpCount > 1){
+    rsvpCount--;
+    document.getElementById('rsvp-count-num').textContent = rsvpCount + '명';
+  }
+};
+document.getElementById('count-plus').onclick = function(){
+  if(rsvpCount < 10){
+    rsvpCount++;
+    document.getElementById('rsvp-count-num').textContent = rsvpCount + '명';
+  }
+};
+
+const rsvpSubmitBtn = document.getElementById('rsvp-submit');
+const rsvpHiddenForm = document.getElementById('rsvp-hidden-form');
+const rsvpHiddenName = document.getElementById('rsvp-hidden-name');
+const rsvpHiddenChoice = document.getElementById('rsvp-hidden-choice');
+const rsvpHiddenCount = document.getElementById('rsvp-hidden-count');
+
+rsvpSubmitBtn.onclick = function(){
+  const name = document.getElementById('rsvp-name').value.trim();
+  if(!name || !rsvpChoice){
+    alert('성함과 참석 여부를 선택해 주세요.');
+    return;
+  }
+  rsvpSubmitBtn.disabled = true;
+  rsvpSubmitBtn.textContent = '전송 중...';
+
+  rsvpHiddenName.value = name;
+  rsvpHiddenChoice.value = rsvpChoice;
+  rsvpHiddenCount.value = (rsvpChoice === '참석합니다') ? (rsvpCount + '명') : '0명';
+  rsvpHiddenForm.submit();
+
+  setTimeout(()=>{
+    document.getElementById('rsvp-thanks').style.display = 'block';
+    document.getElementById('rsvp-thanks').classList.remove('show');
+    void document.getElementById('rsvp-thanks').offsetWidth;
+    document.getElementById('rsvp-thanks').classList.add('show');
+    document.getElementById('rsvp-name').value = '';
+    rsvpCount = 1;
+    document.getElementById('rsvp-count-num').textContent = '1명';
+    rsvpSubmitBtn.disabled = false;
+    rsvpSubmitBtn.textContent = '참석 여부 전달하기';
+  }, 600);
+};
+
+// ---------- Guestbook (Google Apps Script JSON 방식) ----------
+const GB_JSON_URL = 'https://script.google.com/macros/s/AKfycbzScg0h3UNRFgneSF8PjTzWlCWQu0DC-y1BmK7sVK29GoN14ibXRTs8GT4w5zuyrzYc/exec';
+
+const gbList = document.getElementById('gb-list');
+const gbEmpty = document.getElementById('gb-empty');
+const gbPagination = document.getElementById('gb-pagination');
+const gbPrev = document.getElementById('gb-prev');
+const gbNext = document.getElementById('gb-next');
+const gbPageNum = document.getElementById('gb-page-num');
+const gbRefreshBtn = document.getElementById('gb-refresh');
+const PAGE_SIZE = 5;
+let entries = [];
+let gbPage = 1;
+
+async function loadEntries(){
+  if(!GB_JSON_URL || GB_JSON_URL.includes('여기에')){
+    gbEmpty.textContent = '웹 앱 URL을 설정해 주세요.';
+    gbEmpty.style.display = 'block';
+    return;
+  }
+  gbEmpty.textContent = '방명록을 불러오는 중...';
+  gbEmpty.style.display = 'block';
+  let loadError = false;
+  try{
+    const res = await fetch(GB_JSON_URL);
+    if(!res.ok) throw new Error();
+    const data = await res.json();
+    entries = data.filter(item => item.name && item.msg);
+  }catch(err){
+    loadError = true;
+    entries = [];
+  }
+  gbEmpty.textContent = loadError
+    ? '방명록을 불러오지 못했습니다. 웹 앱 배포 설정을 확인해 주세요.'
+    : '아직 남겨진 메시지가 없습니다';
+  gbPage = 1;
+  renderGb();
+}
+
+function renderGb(){
+  const ordered = entries.slice().reverse();
+  const totalPages = Math.max(1, Math.ceil(ordered.length / PAGE_SIZE));
+  if(gbPage > totalPages) gbPage = totalPages;
+  const start = (gbPage - 1) * PAGE_SIZE;
+  const pageItems = ordered.slice(start, start + PAGE_SIZE);
+
+  gbList.innerHTML = '';
+  gbEmpty.style.display = ordered.length ? 'none' : 'block';
+  gbPagination.style.display = ordered.length > PAGE_SIZE ? 'flex' : 'none';
+
+  pageItems.forEach(e=>{
+    const item = document.createElement('div');
+    item.className = 'gb-item';
+    const name = document.createElement('div');
+    name.className = 'name';
+    name.textContent = e.name;
+    const msg = document.createElement('div');
+    msg.className = 'msg';
+    msg.textContent = e.msg;
+    item.appendChild(name);
+    item.appendChild(msg);
+    gbList.appendChild(item);
+  });
+
+  gbPageNum.textContent = gbPage + ' / ' + totalPages;
+  gbPrev.disabled = gbPage <= 1;
+  gbNext.disabled = gbPage >= totalPages;
+}
+gbPrev.onclick = function(){
+  if(gbPage > 1){ gbPage--; renderGb(); }
+};
+gbNext.onclick = function(){
+  const totalPages = Math.max(1, Math.ceil(entries.length / PAGE_SIZE));
+  if(gbPage < totalPages){ gbPage++; renderGb(); }
+};
+gbRefreshBtn.onclick = function(){
+  loadEntries();
+};
+loadEntries();
+
+const gbSubmitBtn = document.getElementById('gb-submit');
+const gbHiddenForm = document.getElementById('gb-hidden-form');
+const gbHiddenName = document.getElementById('gb-hidden-name');
+const gbHiddenMsg = document.getElementById('gb-hidden-msg');
+
+gbSubmitBtn.onclick = function(){
+  const name = document.getElementById('gb-name').value.trim();
+  const msg = document.getElementById('gb-msg').value.trim();
+  if(!name || !msg){
+    alert('성함과 메시지를 입력해 주세요.');
+    return;
+  }
+  gbSubmitBtn.disabled = true;
+  gbSubmitBtn.textContent = '저장 중...';
+
+  gbHiddenName.value = name;
+  gbHiddenMsg.value = msg;
+  gbHiddenForm.submit();
+
+  setTimeout(()=>{
+    entries.push({ name, msg });
+    gbPage = 1;
+    renderGb();
+    document.getElementById('gb-name').value = '';
+    document.getElementById('gb-msg').value = '';
+    gbSubmitBtn.disabled = false;
+    gbSubmitBtn.textContent = '남기기';
+  }, 600);
+};
+
+// ---------- Copy account ----------
+document.querySelectorAll('.copy-btn').forEach(btn=>{
+  btn.onclick = function(){
+    const num = this.dataset.num;
+    navigator.clipboard.writeText(num).then(()=>{
+      const orig = this.textContent;
+      this.textContent = '복사됨';
+      setTimeout(()=>{ this.textContent = orig; }, 1200);
+    }).catch(()=>{
+      alert('계좌번호: ' + num);
+    });
+  };
+});
+
+// ---------- Scroll reveal ----------
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entriesList)=>{
+  entriesList.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+const galleryGrid = document.getElementById('gallery-grid');
+if(galleryGrid){
+  Array.from(galleryGrid.children).forEach((tile, i)=>{
+    tile.style.opacity = '0';
+    tile.style.transform = 'translateY(10px)';
+    tile.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    tile.style.transitionDelay = (i * 0.06) + 's';
+  });
+  const galleryObserver = new IntersectionObserver((entriesList)=>{
+    entriesList.forEach(entry=>{
+      if(entry.isIntersecting){
+        Array.from(galleryGrid.children).forEach(tile=>{
+          tile.style.opacity = '1';
+          tile.style.transform = 'translateY(0)';
+        });
+        galleryObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  galleryObserver.observe(galleryGrid);
+}
+
+// ---------- Background music ----------
+const bgm = document.getElementById('bgm');
+const musicBtn = document.getElementById('music-btn');
+bgm.volume = 0.25;
+let musicStarted = false;
+
+function startMusic(){
+  if(musicStarted) return;
+  musicStarted = true;
+  bgm.play().then(()=>{
+    musicBtn.classList.add('spin');
+  }).catch(()=>{
+    musicStarted = false;
+  });
+}
+document.addEventListener('click', startMusic, { once:true });
+document.addEventListener('touchstart', startMusic, { once:true });
+
+musicBtn.addEventListener('click', (e)=>{
+  e.stopPropagation();
+  if(bgm.paused){
+    bgm.play().then(()=>{ musicBtn.classList.add('spin'); }).catch(()=>{});
+  } else {
+    bgm.pause();
+    musicBtn.classList.remove('spin');
+  }
+});
+</script>
+</body>
+</html>
